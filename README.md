@@ -25,7 +25,9 @@ sql
    
 🌟6-10位：条件系
 
+
 sql
+
 
 6. AND/OR    -- 複数条件
    SELECT * FROM users WHERE age >= 20 AND city = '東京';
@@ -79,6 +81,8 @@ sql
 🌟16-20位：集計系
 
 sql
+
+
 16. COUNT     -- 件数カウント
      SELECT COUNT(*) FROM users;
      SELECT COUNT(DISTINCT city) FROM users;
@@ -99,6 +103,7 @@ sql
 🌟【テーブル操作編】第21-40位：設計時に使う
 
 🌟21-25位：テーブル作成・削除
+
 
 sql
 21. CREATE TABLE  -- テーブル作成
@@ -122,6 +127,7 @@ sql
     
 🌟26-30位：カラム操作
 
+
 sql
 26. ADD COLUMN    -- カラム追加
      ALTER TABLE users ADD COLUMN age INT;
@@ -141,22 +147,33 @@ sql
     
 🌟31-35位：データ型
 
+
 sql
 31. INT           -- 整数
+
 32. VARCHAR(n)    -- 可変長文字列（255までよく使う）
+
 33. TEXT          -- 長い文章
+ 
 34. DATETIME      -- 日時 '2024-01-01 10:30:00'
+
 35. DATE          -- 日付 '2024-01-01'
+
 36. TIMESTAMP     -- タイムスタンプ（自動更新できる）
+ 
 37. BOOLEAN       -- 真偽値（実際はTINYINT(1)）
+
 38. DECIMAL       -- 小数（金額とか）
+
 39. FLOAT/DOUBLE  -- 浮動小数点数
+
 40. JSON          -- JSON形式（MySQL 5.7以降）
 
 
 🌟【制約・キー編】第41-55位：データ品質維持
 
 🌟41-45位：制約
+
 
 sql
 41. PRIMARY KEY   -- 主キー（唯一のID）
@@ -178,6 +195,7 @@ sql
     
 🌟46-50位：キー関連
 
+
 sql
 46. AUTO_INCREMENT -- 自動連番
      id INT AUTO_INCREMENT
@@ -195,6 +213,7 @@ sql
 
 🌟51-55位：JOIN（超重要！）
 
+
 sql
 51. INNER JOIN  -- 内部結合（両方にあるデータのみ）
      SELECT * FROM orders 
@@ -210,6 +229,7 @@ sql
 
 
 🌟56-60位：サブクエリ
+
 
 sql
 56. スカラサブクエリ  -- 1行1列の結果
@@ -228,6 +248,7 @@ sql
 
 
 🌟61-65位：便利機能
+
 
 sql
 61. CASE         -- 条件分岐
@@ -255,6 +276,7 @@ sql
 
 66-70位：HAVINGとウィンドウ関数
 
+
 sql
 66. HAVING      -- GROUP BYの後の条件
      SELECT city, COUNT(*) FROM users 
@@ -269,6 +291,7 @@ sql
 
 🌟71-75位：便利な集計
 
+
 sql
 71. ROLLUP      -- 小計/合計を追加
 72. GROUP_CONCAT -- グループ内の値を連結
@@ -282,6 +305,7 @@ sql
 🌟【管理・設定編】第81-95位：運用系
 
 81-85位：ユーザー管理
+
 
 sql
 81. CREATE USER  -- ユーザー作成
@@ -303,6 +327,7 @@ sql
 
 🌟91-95位：トランザクション
 
+
 sql
 91. BEGIN/START TRANSACTION  -- トランザクション開始
 92. COMMIT        -- 確定
@@ -312,6 +337,7 @@ sql
 
 
 🌟【トラブルシューティング編】第96-100位：デバッグ
+
 
 sql
 96. EXPLAIN      
@@ -327,6 +353,7 @@ sql
 🌟101. 
 【最重要！】絶対に覚えるべきトップ10
 
+
 sql
 1. SELECT * FROM table;
 2. INSERT INTO table VALUES (...);
@@ -341,6 +368,7 @@ sql
 
 
 🌟初心者がよく間違えるポイント
+
 
 sql
 -- ❌ 間違い

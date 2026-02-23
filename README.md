@@ -148,7 +148,7 @@ sql
      ALTER TABLE users RENAME COLUMN name TO username;
 
     
-🌟31-35位：データ型
+🌟31-40位：データ型
 
 
 sql

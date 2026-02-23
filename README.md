@@ -26,6 +26,7 @@ sql
 🌟6-10位：条件系
 
 sql
+
 6. AND/OR    -- 複数条件
    SELECT * FROM users WHERE age >= 20 AND city = '東京';
 
@@ -36,8 +37,12 @@ sql
    SELECT * FROM products WHERE price BETWEEN 1000 AND 5000;
 
 9. LIKE      -- 部分一致検索
-   SELECT * FROM users WHERE name LIKE '田%';  -- 田で始まる
-   SELECT * FROM users WHERE name LIKE '%子';  -- 子で終わる
+   
+   SELECT * FROM users WHERE name LIKE '田%';
+    -- 田で始まる
+   
+   SELECT * FROM users WHERE name LIKE '%子';
+   -- 子で終わる
 
 10. IS NULL   -- NULLの検索
     SELECT * FROM users WHERE deleted_at IS NULL;
@@ -47,21 +52,28 @@ sql
 
 sql
 11. ORDER BY  -- 並び替え
-     SELECT * FROM products ORDER BY price DESC;  -- 高い順
-     SELECT * FROM users ORDER BY created_at ASC;  -- 古い順
+
+     SELECT * FROM products ORDER BY price DESC; 
+     -- 高い順
+     
+     SELECT * FROM users ORDER BY created_at ASC;  
+     -- 古い順
 
 12. DESC/ASC  -- 降順/昇順
      ORDER BY price DESC   -- 降順（高い→低い）
      ORDER BY price ASC    -- 昇順（低い→高い）
 
 13. LIMIT     -- 取得件数制限
-     SELECT * FROM users LIMIT 10;  -- 10件だけ
+     SELECT * FROM users LIMIT 10;
+    -- 10件だけ
 
-14. OFFSET    -- 開始位置指定（ページネーション）
-     SELECT * FROM users LIMIT 10 OFFSET 20;  -- 21-30件目
+15. OFFSET    -- 開始位置指定（ページネーション）
+     SELECT * FROM users LIMIT 10 OFFSET 20;
+    -- 21-30件目
 
-15. DISTINCT  -- 重複排除
-     SELECT DISTINCT city FROM users;  -- ユニークな都市一覧
+16. DISTINCT  -- 重複排除
+     SELECT DISTINCT city FROM users;
+    -- ユニークな都市一覧
 
     
 🌟16-20位：集計系
@@ -302,7 +314,8 @@ sql
 🌟【トラブルシューティング編】第96-100位：デバッグ
 
 sql
-96. EXPLAIN       -- 実行計画確認（チューニングに必須）
+96. EXPLAIN      
+-- 実行計画確認（チューニングに必須）
      EXPLAIN SELECT * FROM users WHERE name = '田中';
 
 97. SHOW WARNINGS -- 警告表示

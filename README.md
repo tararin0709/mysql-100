@@ -56,17 +56,17 @@ sql
 
 11. ORDER BY  -- 並び替え
 
-     SELECT * FROM products ORDER BY price DESC; 
-     -- 高い順
+     SELECT * FROM products ORDER BY price DESC;
+    -- 高い順
      
-     SELECT * FROM users ORDER BY created_at ASC;  
-     -- 古い順
+     SELECT * FROM users ORDER BY created_at ASC;
+    -- 古い順
 
-12. DESC/ASC  -- 降順/昇順
+13. DESC/ASC  -- 降順/昇順
      ORDER BY price DESC   -- 降順（高い→低い）
      ORDER BY price ASC    -- 昇順（低い→高い）
 
-13. LIMIT     -- 取得件数制限
+14. LIMIT     -- 取得件数制限
      SELECT * FROM users LIMIT 10;
     -- 10件だけ
 
@@ -243,6 +243,7 @@ sql
 
 
 sql
+
 56. スカラサブクエリ  -- 1行1列の結果
      SELECT name, (SELECT AVG(age) FROM users) AS avg_age FROM users;
 
@@ -290,6 +291,7 @@ sql
 
 
 sql
+
 66. HAVING      -- GROUP BYの後の条件
      SELECT city, COUNT(*) FROM users 
      GROUP BY city 
@@ -368,6 +370,7 @@ sql
 
 
 sql
+
 96. EXPLAIN      
 -- 実行計画確認（チューニングに必須）
      EXPLAIN SELECT * FROM users WHERE name = '田中';

@@ -53,6 +53,7 @@ sql
 🌟11-15位：並び替え系
 
 sql
+
 11. ORDER BY  -- 並び替え
 
      SELECT * FROM products ORDER BY price DESC; 
@@ -106,6 +107,7 @@ sql
 
 
 sql
+
 21. CREATE TABLE  -- テーブル作成
      CREATE TABLE users (
          id INT PRIMARY KEY,
@@ -129,6 +131,7 @@ sql
 
 
 sql
+
 26. ADD COLUMN    -- カラム追加
      ALTER TABLE users ADD COLUMN age INT;
 
@@ -149,6 +152,7 @@ sql
 
 
 sql
+
 31. INT           -- 整数
 
 32. VARCHAR(n)    -- 可変長文字列（255までよく使う）
@@ -176,17 +180,22 @@ sql
 
 
 sql
+
 41. PRIMARY KEY   -- 主キー（唯一のID）
      id INT PRIMARY KEY AUTO_INCREMENT
+
 
 42. FOREIGN KEY   -- 外部キー（他テーブル参照）
      FOREIGN KEY (user_id) REFERENCES users(id)
 
+
 43. UNIQUE        -- 重複禁止
      email VARCHAR(255) UNIQUE
 
+
 44. NOT NULL      -- NULL禁止
      name VARCHAR(100) NOT NULL
+
 
 45. DEFAULT       -- デフォルト値
      status INT DEFAULT 1
@@ -197,6 +206,7 @@ sql
 
 
 sql
+
 46. AUTO_INCREMENT -- 自動連番
      id INT AUTO_INCREMENT
 
@@ -215,6 +225,7 @@ sql
 
 
 sql
+
 51. INNER JOIN  -- 内部結合（両方にあるデータのみ）
      SELECT * FROM orders 
      INNER JOIN users ON orders.user_id = users.id;
@@ -251,6 +262,7 @@ sql
 
 
 sql
+
 61. CASE         -- 条件分岐
      SELECT 
          name,
@@ -293,6 +305,7 @@ sql
 
 
 sql
+
 71. ROLLUP      -- 小計/合計を追加
 72. GROUP_CONCAT -- グループ内の値を連結
      SELECT city, GROUP_CONCAT(name) FROM users GROUP BY city;
@@ -308,20 +321,30 @@ sql
 
 
 sql
+
 81. CREATE USER  -- ユーザー作成
+
 82. GRANT        -- 権限付与
+
 83. REVOKE       -- 権限削除
+
 84. SHOW GRANTS  -- 権限確認
+
 85. DROP USER    -- ユーザー削除
 
 
 🌟86-90位：データベース操作
 
 sql
+
 86. CREATE DATABASE  -- DB作成
+
 87. DROP DATABASE    -- DB削除
+
 88. USE database_name -- DB選択
+
 89. SHOW DATABASES   -- DB一覧
+
 90. SHOW TABLES      -- テーブル一覧
 
 
@@ -329,10 +352,15 @@ sql
 
 
 sql
+
 91. BEGIN/START TRANSACTION  -- トランザクション開始
+
 92. COMMIT        -- 確定
+
 93. ROLLBACK      -- キャンセル
+
 94. SAVEPOINT     -- 途中セーブ
+
 95. LOCK TABLES   -- テーブルロック
 
 
@@ -355,6 +383,7 @@ sql
 
 
 sql
+
 1. SELECT * FROM table;
 2. INSERT INTO table VALUES (...);
 3. UPDATE table SET col = value WHERE condition;
@@ -371,6 +400,7 @@ sql
 
 
 sql
+
 -- ❌ 間違い
 DELETE FROM users;  -- 全データ消える！（WHERE忘れ）
 
